@@ -14,15 +14,14 @@
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preload" href="fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('cb-open'))document.documentElement.classList.add('seen')}catch(e){}if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Café Bouture","url":"https://www.cafebouture.fr/","image":"https://www.cafebouture.fr/img/og.jpg","logo":"https://www.cafebouture.fr/img/apple-touch-icon.png","telephone":"+33253350282","priceRange":"€€","servesCuisine":["Café de spécialité","Cuisine végétarienne","Brunch"],"acceptsReservations":false,"address":{"@type":"PostalAddress","streetAddress":"90 rue Maréchal Joffre","postalCode":"44000","addressLocality":"Nantes","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"18:00"}],"sameAs":["https://www.instagram.com/cafe.bouture/","https://www.facebook.com/61571469621591"]}
 </script>
 <style>
-@font-face{font-family:"Fraunces";src:url(fonts/fraunces.woff2) format("woff2");font-weight:400 900;font-display:swap}
-@font-face{font-family:"Fraunces";src:url(fonts/fraunces-italic.woff2) format("woff2");font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage.woff2) format("woff2");font-weight:400 800;font-display:swap}
 @font-face{font-family:"Outfit";src:url(fonts/outfit.woff2) format("woff2");font-weight:300 700;font-display:swap}
 @font-face{font-family:"Gochi Hand";src:url(fonts/gochi.woff2) format("woff2");font-display:swap}
 
@@ -35,7 +34,7 @@
   --cream:#FFF6E3; --cream-2:#F6E9CD; --kraft:#E9D3A8;
   --terra:#F2A07E; --terra-d:#B9532C; --sage:#8FBF77; --kelly:#1A9A43;
   --slate:#1E2A22; --ink:#1B2A1F; --muted:#4A5A4E;
-  --f-d:"Fraunces",Georgia,serif; --f-s:"Outfit",system-ui,sans-serif; --f-h:"Gochi Hand","Comic Sans MS",cursive;
+  --f-d:"Bricolage Grotesque","Outfit",system-ui,sans-serif; --f-s:"Outfit",system-ui,sans-serif; --f-h:"Gochi Hand","Comic Sans MS",cursive;
   --bounce:cubic-bezier(.34,1.56,.64,1); --out:cubic-bezier(.22,1,.36,1);
   --pad:clamp(18px,4vw,56px); --max:1320px;
 }
@@ -57,8 +56,8 @@ a,button,input,label{-webkit-tap-highlight-color:transparent;touch-action:manipu
 .skip:focus{top:12px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.d{font-family:var(--f-d);font-weight:800;letter-spacing:-.03em;line-height:.95}
-.d em{font-style:italic;font-weight:500}
+.d{font-family:var(--f-d);font-weight:800;letter-spacing:-.035em;line-height:.92;font-optical-sizing:auto}
+.d em{font-style:normal;font-weight:500;letter-spacing:-.04em}
 .hand{font-family:var(--f-h);font-weight:400}
 .kick{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:600 13px/1 var(--f-s);letter-spacing:.16em;text-transform:uppercase}
 .kick b{font:400 21px/1 var(--f-h);letter-spacing:0;text-transform:none;color:var(--terra-d)}
@@ -163,7 +162,7 @@ a,button,input,label{-webkit-tap-highlight-color:transparent;touch-action:manipu
 .go .sign .lg::after{transform:scaleX(0)!important}
 .go .sign .lg-cup{transform:none!important;opacity:1!important}
 .go .sign .lg-leaf{transform:none!important}
-.sign h1{margin-top:clamp(18px,2.4vw,30px);font:italic 500 clamp(21px,2.5vw,34px)/1.2 var(--f-d);letter-spacing:-.01em}
+.sign h1{margin-top:clamp(18px,2.4vw,30px);font:600 clamp(20px,2.3vw,31px)/1.2 var(--f-d);letter-spacing:-.015em}
 .sign h1 span{font-style:normal;font-family:var(--f-s);font-weight:600;font-size:max(12px,.42em);letter-spacing:.2em;text-transform:uppercase;display:block;margin-top:10px}
 .front{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(12px,1.6vw,22px);margin-top:clamp(12px,1.6vw,22px)}
 .window{padding:20px;display:flex}
@@ -292,7 +291,7 @@ body.noscroll{overflow:hidden}
 .js .ptag.in .pimg{transform:none;opacity:1}
 @media (hover:hover){.flip:hover .pimg{animation:wiggle .9s var(--bounce)}}
 .face h3{font:800 clamp(25px,2.2vw,31px)/1 var(--f-d);letter-spacing:-.02em;color:var(--forest)}
-.face .lat{font:italic 400 14.5px/1.3 var(--f-d);color:var(--muted);margin-top:4px}
+.face .lat{font:italic 400 14.5px/1.3 var(--f-s);color:var(--muted);margin-top:4px}
 .face .perso{font:400 clamp(19px,1.6vw,22px)/1.2 var(--f-h);color:var(--forest);margin-top:12px}
 .face .hint{margin-top:auto;align-self:flex-start;min-height:40px;padding:0 2px;font-size:14px;font-weight:600;color:var(--insta);display:flex;align-items:center;gap:6px;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
 .face.back{transform:rotateY(180deg);background:var(--forest);color:var(--cream);border-color:var(--forest)}
